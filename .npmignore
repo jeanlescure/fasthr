@@ -1,0 +1,10 @@
+node_modules
+public
+.git
+.gitignore
+nodemon.json
+README.md
+rollup*
+server.ts
+tsconfig.json
+yarn.lock
