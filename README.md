@@ -14,7 +14,19 @@ Please consider:
 - Supporting me on [Patreon](https://www.patreon.com/jeanlescure) 🏆
 - Starring this repo on [Github](https://github.com/jeanlescure/fasthr) 🌟
 
+## System dependencies
+
+- Node.js ([install instructions](https://github.com/nvm-sh/nvm#installing-and-updating))
+
 ## Usage
+
+With `npx` you can use as a one-liner:
+
+```sh
+$ npx fasthr
+```
+
+**Alternatively**
 
 Install globally:
 
@@ -22,7 +34,7 @@ Install globally:
 $ npm install -g fasthr
 ```
 
-Run:
+then run:
 
 ```sh
 # Start the server on the current directory on port 3000
@@ -32,7 +44,9 @@ $ fasthr
 $ fasthr -p 8080
 ```
 
-Run help for more options:
+## Options
+
+Run help trigger for more info:
 
 ```
 $ fasthr -h
