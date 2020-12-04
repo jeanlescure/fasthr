@@ -2,7 +2,7 @@
 
 # Fast Hot Reload (fasthr)
 
-This is a tiny cli tool that mixes together [no-bs-typescript-server-boilerplate](https://github.com/jeanlescure/no-bs-typescript-server-boilerplate), [fastify](https://github.com/fastify/fastify), and [livereload](http://livereload.com/) to easily spin up a hot reload http server on the current directory.
+This is a tiny CLI tool that mixes together [no-bs-typescript-server-boilerplate](https://github.com/jeanlescure/no-bs-typescript-server-boilerplate), [fastify](https://github.com/fastify/fastify), and [livereload](http://livereload.com/) to easily spin up a hot reload http server on the current directory.
 
 ## Like this project? ❤️
 
