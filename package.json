@@ -1,6 +1,6 @@
 {
   "name": "fasthr",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A fast and tiny CLI tool to easily spin up a hot reload http server on the current directory",
   "bin": {
     "fasthr": "bin/fasthr"
