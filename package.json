@@ -1,9 +1,9 @@
 {
   "name": "fasthr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A fast and tiny CLI tool to easily spin up a hot reload http server on the current directory",
   "bin": {
-    "short-unique-id": "bin/fasthr"
+    "fasthr": "bin/fasthr"
   },
   "repository": "https://github.com/jeanlescure/fasthr",
   "author": "Jean M. Lescure",
