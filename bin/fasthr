@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+const [,, ...args] = process.argv;
+
+const {options} = require('./getopts').create([
+  ['d' , 'dir=ARG', 'root directory where to serve files from.'],
+  ['p'  , 'port=ARG', 'port to run server on.'],
+  ['l'  , 'livePort=ARG', 'port to run livereload on.'],
+])
+.bindHelp()
+.parseSystem();
+
+const livereload = require('livereload');
+const liveServer = livereload.createServer({
+  port: options.livePort,
+});
+liveServer.watch(options.dir || process.cwd());
+
+const server = require('./server');
+
+server(options);

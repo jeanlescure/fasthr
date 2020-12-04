@@ -1,0 +1,5 @@
+{
+  "watch": ["bin"],
+  "ext": "*",
+  "exec": "./bin/fasthr"
+}

@@ -1,0 +1,13 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "compilerOptions": {
+    "sourceMap": true,
+    "pretty": true,
+    "esModuleInterop": true
+  },
+  "include": ["server.ts", "src"]
+}
