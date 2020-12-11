@@ -9,6 +9,7 @@ const defaults = {
   dir: process.cwd(),
   port: 3000,
   livePort: 35729,
+  address: '0.0.0.0',
 };
 
 export default async (options) => {
@@ -16,6 +17,7 @@ export default async (options) => {
     dir,
     port,
     livePort,
+    address,
   }: any = {
     ...defaults,
     ...options,
@@ -58,7 +60,7 @@ export default async (options) => {
   });
 
   try {
-    await server.listen(port);
+    await server.listen(port, address);
   } catch (err) {
     server.log.error(err);
     process.exit(1);

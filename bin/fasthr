@@ -2,9 +2,10 @@
 const [,, ...args] = process.argv;
 
 const {options} = require('./getopts').create([
-  ['d' , 'dir=ARG', 'root directory where to serve files from.'],
-  ['p'  , 'port=ARG', 'port to run server on.'],
-  ['l'  , 'livePort=ARG', 'port to run livereload on.'],
+  ['d', 'dir=ARG', 'root directory where to serve files from (default: current directory).'],
+  ['p', 'port=ARG', 'port to run server on (default: 3000).'],
+  ['a', 'address=ARG', 'address to run server on (default: 0.0.0.0).'],
+  ['l', 'livePort=ARG', 'port to run livereload on.'],
 ])
 .bindHelp()
 .parseSystem();
