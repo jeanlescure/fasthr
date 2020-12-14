@@ -55,16 +55,17 @@ Usage:
   node fasthr [OPTION]
 
 Options:
-  -d, --dir          root directory where to serve files from.
-  -p, --port         port to run server on.
-  -l, --livePort     port to run livereload on.
+  -d, --dir=ARG      root directory where to serve files from (default: current directory).
+  -p, --port=ARG     port to run server on (default: 3000).
+  -a, --address=ARG  address to run server on (default: 0.0.0.0).
+  -l, --livePort=ARG port to run livereload on (default: 35729).
   -h, --help         display this help
 ```
 
 ## Development
 
 I chose Rollup to handle the transpiling, compression, and any other transformations needed to get
-your Typescript code running as quickly and performant as possible.
+this repo's Typescript code running as quickly and performant as possible.
 
 ```
 yarn dev
