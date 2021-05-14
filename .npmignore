@@ -8,3 +8,4 @@ rollup*
 server.ts
 tsconfig.json
 yarn.lock
+*.tgz

@@ -37,7 +37,7 @@ if (isProduction) {
 
 if (!isProduction) {
   plugins.push(run({
-    execArgv: ['-r', 'dotenv/config', '-r', 'source-map-support/register', '--inspect'],
+    execArgv: ['-r', 'source-map-support/register', '--inspect'],
   }));
 }
 

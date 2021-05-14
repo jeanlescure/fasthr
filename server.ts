@@ -1,15 +1,12 @@
 import fastify from 'fastify';
 import { PassThrough } from 'stream';
 
-const server = fastify({
-  logger: true
-});
-
 const defaults = {
   dir: process.cwd(),
   port: 3000,
   livePort: 35729,
   address: '0.0.0.0',
+  quiet: false,
 };
 
 export default async (options) => {
@@ -18,10 +15,15 @@ export default async (options) => {
     port,
     livePort,
     address,
+    quiet,
   }: any = {
     ...defaults,
     ...options,
   };
+
+  const server = fastify({
+    logger: !quiet,
+  });
 
   server.register(require('fastify-static'), {
     root: dir,
@@ -60,7 +62,9 @@ export default async (options) => {
   });
 
   try {
-    await server.listen(port, address);
+    await server.listen(port, address, () => {
+      console.log(`🔥 Fast Hot Reload is running on http://${address}:${port}`);
+    });
   } catch (err) {
     server.log.error(err);
     process.exit(1);
